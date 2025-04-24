@@ -385,9 +385,9 @@ def Verify(n, d, k, m_1, m_2, l, A, G, A_com, v_ID, ID_Hash1, Upk_ID, j, z, c, m
 k = 35
 q = 2**k
 n = 128
-d = 9
+d = 8
 m_1 = (k + 2) * d
-m_2 = 45
+m_2 = 40
 
 # Setting the Signer Index
 j = 0
