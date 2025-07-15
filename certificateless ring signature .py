@@ -1,10 +1,9 @@
 import math
-from re import S, T, U
 import numpy as np
 import time
 import hashlib
 
-from numpy.random import f
+
 
 # Gaussian sampling algorithm
 def sample_discrete_gaussian_polynomial(x, q, sigma):
@@ -382,22 +381,23 @@ def Verify(n, d, k, m_1, m_2, l, A, G, A_com, v_ID, ID_Hash1, Upk_ID, j, z, c, m
 
 
 # Setting parameters
-k = 35
+k = 23
 q = 2**k
 n = 128
-d = 8
+d = 1
 m_1 = (k + 2) * d
-m_2 = 40
+m_2 = 15
 
 # Setting the Signer Index
 j = 0
 
 # Setting the plaintext
 mu = 123545454564
-sigma = 2 * math.sqrt(math.log(2 * n * (1 + 1 / (2**(-80))) / math.pi))
+# sigma = 2 * math.sqrt(math.log(2 * n * (1 + 1 / (2**(-80))) / math.pi))
+sigma = 4.578
 
 # Setting the ID list
-ID_list = np.arange(2)
+ID_list = np.arange(8)
 l = ID_list.shape[0]
 
 # Calculate Hash-1 for each member ID
